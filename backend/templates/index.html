@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>{{lesson.title}}</h1>
-    <iframe src="{{lesson.get_iframe_url}}?token={{token.token}}" height="300" width="100%"></iframe>
+    <video width="600" height="350" controls controlsList="nodownload">
+        <source src="{{lesson.get_iframe_url}}?token={{token.token}}" type="video/mp4">
+    </video>
 </body>
-</html>
+</html> 

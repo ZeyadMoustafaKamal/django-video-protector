@@ -21,7 +21,6 @@ class Lesson(models.Model):
 class VideoToken(models.Model):
     video = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='tokens')
     token = models.CharField(max_length=50, null=True)
-    used = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     def save(self, *args, **kwargs):
         if not self.token:
