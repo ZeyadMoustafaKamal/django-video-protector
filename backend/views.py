@@ -20,7 +20,7 @@ def protected_video(request, public_id):
 def index(request, lesson_id):
     context = {}
     lesson = get_object_or_404(Lesson, id=lesson_id)
-    token = VideoToken(video=lesson) # I named it video in the models by mistake
+    token = VideoToken(lesson=lesson) # I named it video in the models by mistake
     token.save()
     context['lesson'] = lesson
     context['token'] = token

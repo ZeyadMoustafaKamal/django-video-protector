@@ -16,10 +16,10 @@ class Lesson(models.Model):
             self.public_id = get_random_id()
             self.save()
         return super().save(*args, **kwargs)
-    def get_iframe_url(self):
+    def get_protected_url(self):
         return reverse('video', kwargs={'public_id':self.public_id})
 class VideoToken(models.Model):
-    video = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='tokens')
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='tokens')
     token = models.CharField(max_length=50, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     def save(self, *args, **kwargs):
