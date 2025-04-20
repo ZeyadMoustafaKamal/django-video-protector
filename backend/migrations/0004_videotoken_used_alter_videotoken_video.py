@@ -5,20 +5,23 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('backend', '0003_videotoken_token'),
+        ("backend", "0003_videotoken_token"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='videotoken',
-            name='used',
+            model_name="videotoken",
+            name="used",
             field=models.BooleanField(default=False),
         ),
         migrations.AlterField(
-            model_name='videotoken',
-            name='video',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tokens', to='backend.lesson'),
+            model_name="videotoken",
+            name="video",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="tokens",
+                to="backend.lesson",
+            ),
         ),
     ]

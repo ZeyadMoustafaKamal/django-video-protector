@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('backend', '0002_lesson_public_id'),
+        ("backend", "0002_lesson_public_id"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='videotoken',
-            name='token',
+            model_name="videotoken",
+            name="token",
             field=models.CharField(max_length=50, null=True),
         ),
     ]

@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('backend', '0004_videotoken_used_alter_videotoken_video'),
+        ("backend", "0004_videotoken_used_alter_videotoken_video"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='videotoken',
-            name='used',
+            model_name="videotoken",
+            name="used",
         ),
     ]

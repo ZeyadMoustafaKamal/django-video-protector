@@ -4,15 +4,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('backend', '0005_remove_videotoken_used'),
+        ("backend", "0005_remove_videotoken_used"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='videotoken',
-            old_name='video',
-            new_name='lesson',
+            model_name="videotoken",
+            old_name="video",
+            new_name="lesson",
         ),
     ]
