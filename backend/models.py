@@ -19,7 +19,6 @@ class Lesson(models.Model):
     def save(self, *args, **kwargs):
         if not self.public_id:
             self.public_id = get_random_id()
-            self.save()
         return super().save(*args, **kwargs)
 
     def get_protected_url(self):
