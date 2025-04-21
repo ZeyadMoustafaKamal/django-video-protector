@@ -8,9 +8,9 @@
 - run `uv run manage.py add_video`
 - run `uv run manage.py runserver`
 
-now open the browser in [127.0.0.1:8000/1](127.0.0.1:8000/1) to see the video and you can't use the url in the video tag to download the video.
+now open the browser in [http://127.0.0.1:8000/1](127.0.0.1:8000/1) to see the video and you can't use the url in the video tag to download the video.
 
 ### How to use the dashboard
 - run `uv run manage.py createsuperuser` and enter the required fields
-- go to [127.0.0.1:8000/admin](127.0.0.1:8000/admin) and login with your credentials
+- go to [http://127.0.0.1:8000/admin](127.0.0.1:8000/admin) and login with your credentials
 
